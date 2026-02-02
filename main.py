@@ -282,3 +282,8 @@ def delete_account(acc_id: str):
         "account_id": acc_id,
         "deleted_transactions": len(txs)
     }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
